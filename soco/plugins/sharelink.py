@@ -240,7 +240,7 @@ class ShareLinkPlugin(SoCoPlugin):
                 enqueue_uri = magic[share_type]["prefix"] + encoded_uri
 
                 if share_type == "playlist" and isinstance(service, SpotifyShare):
-                    playlist_title = kwargs.get("extras", {}).get("playlist_title", "")
+                    playlist_title = kwargs.get("extra", {}).get("playlist_title", "")
                     metadata_template = (
                         '<DIDL-Lite xmlns:dc="http://purl.org/dc/elements'
                         '/1.1/" xmlns:upnp="urn:schemas-upnp-org:metadata'
